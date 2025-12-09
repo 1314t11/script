@@ -30,7 +30,7 @@ sed -i "/\\[Preferences\\]/a Downloads\\\\PreAllocation=false" /home/$USER/.conf
 sed -i "/\\[Preferences\\]/a WebUI\\\\CSRFProtection=false" /home/$USER/.config/qBittorrent/qBittorrent.conf
 // 添加全局下载速度限制为 164000 KB/s，不限制上传速度
 sed -i "/\\[Preferences\\]/a Bittorrent\\\\GlobalMaxRatio=-1" /home/$USER/.config/qBittorrent/qBittorrent.conf
-sed -i "/\\[Preferences\\]/a Connection\\\\GlobalMaxDownloadSpeed=164000" /home/$USER/.config/qBittorrent/qBittorrent.conf
+sed -i "/\\[Preferences\\]/a Connection\\\\GlobalDLLimit=164000" /home/$USER/.config/qBittorrent/qBittorrent.conf
 sed -i "s/disable_tso_/# disable_tso_/" /root/.boot-script.sh
 echo "systemctl enable qbittorrent-nox@$USER" >> /root/BBRx.sh
 echo "systemctl start qbittorrent-nox@$USER" >> /root/BBRx.sh
